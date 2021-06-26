@@ -1,0 +1,2 @@
+# Get Started with Playwright .Net API
+As of [Playwright .Net API 1.12.2](https://github.com/microsoft/playwright-dotnet/releases/tag/v1.12.2), [connecting to an existing browser session](https://github.com/microsoft/playwright-dotnet/issues/1291) is not possible. We'll update examples when the feature is landed.

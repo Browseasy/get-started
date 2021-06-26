@@ -1,0 +1,2 @@
+# Stealth Mode Example
+As of [Playwright Java API 1.12.1](https://github.com/microsoft/playwright-java/releases/tag/v1.12.1), [BrowserContext.newCDPSession](https://playwright.dev/docs/api/class-browsercontext#browser-context-new-cdp-session) is not available in Java API. We need this particular functionality to figure out [TargetID](https://chromedevtools.github.io/devtools-protocol/tot/Target/#type-TargetID) of the page that we would like to attach from DevTools frontend application. 
