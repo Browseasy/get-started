@@ -1,11 +1,16 @@
 import * as puppeteer from 'puppeteer-core';
 import * as open from 'open'
 
-// Update your endpoint with the one dedicated to your own plan or use freemium.
-const BROWSEASY_ENDPOINT = 'wss://freemium.browseasy.com';
+// Check your API key and endpoint from 
+// My Products (https://browseasy.com/products/) page.
 
-// Check your API key from My Products page for your plan and update accordingly. 
-const BROWSEASY_API_KEY = 'YOUR-API-KEY';
+// Assuming that it's stored in the environment variables, 
+// e.g. wss://freemium.browseasy.com
+const BROWSEASY_ENDPOINT = process.env.BROWSEASY_ENDPOINT;
+
+// Assuming that it's stored in the environment variables
+// e.g. ccc70169f82f4c7c8a33ecca21c1becf
+const BROWSEASY_API_KEY = process.env.BROWSEASY_API_KEY;
 
 // Your unique connection string.
 const BROWSEASY_CONNECTION_STRING = `${BROWSEASY_ENDPOINT}?code=${BROWSEASY_API_KEY}`;
@@ -48,7 +53,7 @@ const BROWSEASY_DEBUG_ENDPOINT = 'https://debug.browseasy.com/inspector.html?rem
 
     // You can put a break point at the next statement if your editor supports it.
     // Navigate to Am I Unique fingerprint page.
-    // Verify that a random fingerprint is generated for each session.
+    // Verify that a random unique fingerprint is generated for each session.
     await page.goto(`https://amiunique.org/fp`);
     
     // Log to DevTools console.
