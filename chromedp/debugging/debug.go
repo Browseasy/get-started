@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"log"
 	"os/exec"
+	"os"
 	"runtime"
 	"strings"
 	"time"
@@ -12,11 +13,16 @@ import (
 	"github.com/chromedp/chromedp"
 )
 
-// Update your endpoint with the one dedicated to your own plan or use freemium.
-const BROWSEASY_ENDPOINT = "wss://freemium.browseasy.com"
+// Check your API key and web socket endpoint from 
+// My Products (https://browseasy.com/products/) page.
 
-// Check your API key from My Products page for your plan and update accordingly.
-const BROWSEASY_API_KEY = "YOUR-API-KEY"
+// Assuming that it's stored in the environment variables, 
+// e.g. wss://freemium.browseasy.com
+var BROWSEASY_ENDPOINT = os.Getenv("BROWSEASY_ENDPOINT")
+
+// Assuming that it's stored in the environment variables
+// e.g. ccc70169f82f4c7c8a33ecca21c1becf
+var BROWSEASY_API_KEY = os.Getenv("BROWSEASY_API_KEY")
 
 // Your unique connection string.
 var BROWSEASY_CONNECTION_STRING = fmt.Sprintf("%s?code=%s", BROWSEASY_ENDPOINT, BROWSEASY_API_KEY)
