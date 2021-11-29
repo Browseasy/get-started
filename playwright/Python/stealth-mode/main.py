@@ -1,11 +1,17 @@
 import asyncio
+import os
 from playwright.async_api import async_playwright
 
-# Update your endpoint with the one dedicated to your own plan or use freemium.
-BROWSEASY_ENDPOINT = 'wss://freemium.browseasy.com'
+# Check your API key and web socket endpoint from 
+# My Products (https://browseasy.com/products/) page.
 
-# Check your API key from My Products page for your plan and update accordingly. 
-BROWSEASY_API_KEY = 'YOUR-API-KEY';
+# Assuming that it's stored in the environment variables, 
+# e.g. wss://freemium.browseasy.com
+BROWSEASY_ENDPOINT = os.environ["BROWSEASY_ENDPOINT"]
+
+# Assuming that it's stored in the environment variables
+# e.g. ccc70169f82f4c7c8a33ecca21c1becf
+BROWSEASY_API_KEY = os.environ["BROWSEASY_API_KEY"]
 
 # Your unique connection string.
 BROWSEASY_CONNECTION_STRING = f'{BROWSEASY_ENDPOINT}?code={BROWSEASY_API_KEY}'
@@ -29,8 +35,8 @@ async def main():
 
         page = await context.new_page()
 
-        await page.goto("https://browseasy.com")
-        await page.screenshot(path="browseasy.png")
+        await page.goto("https://fingerprintjs.github.io/fingerprintjs/")
+        await page.screenshot(path="fingerprintjs.png")
         await browser.close()
 
 asyncio.run(main())
