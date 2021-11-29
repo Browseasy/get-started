@@ -5,11 +5,16 @@ import com.microsoft.playwright.*;
 import com.microsoft.playwright.Browser.NewContextOptions;
 
 public class Screenshot {
-  // Update your endpoint with the one dedicated to your own plan or use freemium.
-  static final String BROWSEASY_ENDPOINT = "wss://freemium.browseasy.com";
+  // Check your API key and web socket endpoint from
+  // My Products (https://browseasy.com/products/) page.
 
-  // Check your API key from My Products page for your plan and update accordingly.
-  static final String BROWSEASY_API_KEY = "YOUR-API-KEY";
+  // Assuming that it's stored in the environment variables
+  // e.g. ccc70169f82f4c7c8a33ecca21c1becf
+  static final String BROWSEASY_ENDPOINT = System.getenv("BROWSEASY_ENDPOINT");
+
+  // Check your API key from My Products page for your plan and update
+  // accordingly.
+  static final String BROWSEASY_API_KEY = System.getenv("BROWSEASY_API_KEY");
 
   // Your unique connection string.
   static final String BROWSEASY_CONNECTION_STRING = "%s?code=%s".formatted(BROWSEASY_ENDPOINT, BROWSEASY_API_KEY);
