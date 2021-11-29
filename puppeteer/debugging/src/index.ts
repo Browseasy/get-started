@@ -1,7 +1,7 @@
 import * as puppeteer from 'puppeteer-core';
 import * as open from 'open'
 
-// Check your API key and endpoint from 
+// Check your API key and web socket endpoint from 
 // My Products (https://browseasy.com/products/) page.
 
 // Assuming that it's stored in the environment variables, 
