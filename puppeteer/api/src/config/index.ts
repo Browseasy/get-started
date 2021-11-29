@@ -1,9 +1,12 @@
-// Update your endpoint with the one dedicated to your own plan or use freemium.
-// Assuming that it's stored in the environment variables
+// Check your API key and endpoint from 
+// My Products (https://browseasy.com/products/) page.
+
+// Assuming that it's stored in the environment variables, 
+// e.g. wss://freemium.browseasy.com
 export const BROWSEASY_ENDPOINT = process.env.BROWSEASY_ENDPOINT;
 
-// Check your API key from My Products page for your plan and update accordingly. 
 // Assuming that it's stored in the environment variables
+// e.g. ccc70169f82f4c7c8a33ecca21c1becf
 export const BROWSEASY_API_KEY = process.env.BROWSEASY_API_KEY;
 
 // Your unique connection string.
