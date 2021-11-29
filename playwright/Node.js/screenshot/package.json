@@ -18,6 +18,6 @@
     "typescript": "^4.3.4"
   },
   "dependencies": {
-    "playwright": "^1.12.2"
+    "playwright": "^1.16.3"
   }
 }

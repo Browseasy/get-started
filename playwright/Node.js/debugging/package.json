@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "open": "^8.2.1",
-    "playwright": "^1.12.2",
+    "playwright": "^1.16.3",
     "raw-guid-converter": "^1.0.130"
   }
 }
